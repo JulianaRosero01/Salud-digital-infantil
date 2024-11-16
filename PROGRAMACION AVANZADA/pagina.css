@@ -704,3 +704,21 @@ footer{
 .testimonios h2{
     font-size: 20px;
 }
+.comentarios-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 18px;
+    border-radius: 2px;
+    box-shadow: 0 4px 4px #007BFF;
+}
+textarea {
+    width: 90%;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid #007BFF;
+    border-radius: 5px;
+    resize: vertical;
+    font-size: 16px;
+    color: #333;
+}
