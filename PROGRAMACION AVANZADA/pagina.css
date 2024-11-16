@@ -1,0 +1,706 @@
+
+header {
+    position: relative;
+    background-color: #ffffff;
+    padding: -400px;
+    text-align: center;
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 20px;
+    
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+.intro-proposito {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+}
+.intro-actividades {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+
+.intro-texto {
+    max-width: 50%;
+}
+
+.intro-texto h2 {
+    color: #007BFF;
+    font-size: 35px;
+}
+
+.intro-texto p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.intro-imagenes {
+    width: 500px;
+    overflow: hidden; /* Para ocultar imágenes fuera del área visible */
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    width: calc(500px * 3); /* Ajusta según la cantidad de imágenes */
+    animation: slide 12s infinite;
+}
+
+.carousel img {
+    width: 500px; /* Cada imagen ocupa el espacio del contenedor */
+    height: auto;
+    flex-shrink: 0;
+    border-radius: 10px;
+}
+
+/* Animación del carrusel */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-500px); }
+    50% { transform: translateX(-1000px); }
+    75% { transform: translateX(-500px); }
+    100% { transform: translateX(0); }
+}
+
+
+
+
+
+
+
+.imagenes-derecha {
+    float: right; /* Colocar las imágenes a la derecha del contenido */
+    width: 220px; /* Ancho de la sección de imágenes */
+    margin-left: 20px; /* Espacio entre las imágenes y el texto */
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: -2050px;
+}
+
+.imagenes-derecha img {
+    width: 100%; /* Asegura que las imágenes ocupen todo el ancho del contenedor */
+    border-radius: 1px; /* Bordes redondeados para un toque elegante */
+    
+    margin-bottom: 15px; /* Espacio entre las imágenes */
+}
+
+
+
+/* Ajustes en el contenido principal para evitar solapamiento */
+.main-content {
+    margin-right: 250px; /* Espacio para las imágenes a la derecha */
+    padding: 20px;
+}
+
+
+
+.seguridad-digital {
+    margin-top: 40px;
+    padding: 20px;
+    
+    border-radius: 10px;
+  
+}
+
+
+.contenido-seguridad {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite que el contenido se adapte al tamaño de la pantalla */
+}
+
+.contenido-seguridad div {
+    flex: 1;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contenido-seguridad h3 {
+    color: #1976D2; /* Color para los subtítulos */
+    margin-bottom: 10px;
+}
+
+.contenido-seguridad p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.search-container {
+    position: absolute;
+    top: 6%; /* Alineado verticalmente al centro del título */
+    right: 20px; /* Espacio desde el lado derecho */
+    transform: translateY(-50%); /* Centrar verticalmente */
+    display: flex;
+    align-items: center;
+    z-index: 500; /* Asegura que esté por encima de otros elementos */
+    
+    
+}
+
+.search-container input[type="text"] {
+    padding: 8px;
+    font-size: 14px;
+    color: #1976D2;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    border: 2px solid #12c2e9; 
+    background-color: #FFFFFF;
+}
+
+.search-container button {
+    padding: 8px;;
+    color: var(--black);
+    border: 2px solid var(--primary-color);
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #12c2e9; 
+   
+}
+
+
+
+/*PARA EL TITULO*/
+.animaciontitulo {
+    top: 50;
+    color: #ffffff; /* Color del título animado */
+    background-image: linear-gradient(-250deg, #00d9ff4f 0%, #007BFF 50%, #afe0fcb9 100%);
+    text-transform: uppercase;
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: bgText 2.5s linear infinite;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-shadow: 0px 25px 20px rgba(0, 0, 0, 0.2); /* Sombra suave que simula un efecto de flotación */
+    font-weight: bold;
+    font-size: 45px; /* Aumentar el grosor del texto */
+}
+@keyframes bgText{
+    to{
+        background-position: 200% center;
+    }
+}
+
+
+
+
+.sidebar {
+   position: absolute;
+    top: 550px;
+    left: 30px;
+    width: 180px;
+    height: auto; /* Ajustar el tamaño de la barra lateral */
+    background: white; /* Fondo de la barra lateral */
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    margin-right: 20px; /* Espacio adicional entre la barra lateral y el contenido */
+   
+    border-radius: 1px; /* Bordes redondeados */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+   
+    
+   
+}
+
+.sidebar:hover {
+    
+    transform: scale(1.05);
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.5); /* Para sombra en toda la barra lateral*/
+}
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    
+    margin-bottom: -10px;
+    line-height: 1.6; /* Ajustar el interlineado de las viñetas */
+    position: relative;
+}
+
+.sidebar ul li:before {
+    content: "-"; 
+    color: #007BFF;
+    position: absolute;
+    left: -20px;
+    font-size: 1.2em;
+    left: 0; /* Ajustar la posición para acercar la viñeta al texto */
+    top: 50%;
+    transform: translateY(-50%); /* Centrar la viñeta verticalmente respecto al texto */
+   
+}
+
+
+.sidebar ul li a {
+    color: #3b56ec; /* Color de enlaces en la barra lateral */
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    background-color: #007BFF; /* Hover en enlaces de la barra lateral */
+    color: white; /* Texto blanco al pasar el mouse */
+    border-radius: 3px; /* Reducir el radio de la sombra para que sea más pequeña */
+    transform: translateX(5px); /* Reducir el desplazamiento hacia la derecha */
+}
+
+.main-content {
+    margin-left: 270px;
+    padding: 20px;
+    
+    
+}
+.main-content h2{
+     color: #007BFF;
+    font-size: 24px;
+    text-align: left;
+}
+
+
+
+
+
+.main-content ul {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+
+
+.lista-consejos {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-consejos li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.lista-consejos img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+
+
+.imagen-consejo img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.sidebar .decorative-line {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #007BFF, #12c2e9, #cc222d);
+    margin: 15px 0;
+}
+
+
+
+
+.contenedor {
+    display: flex; /*para alinear */
+    align-items: center; 
+}
+.logo {
+    width: 150px; /* para ajustar el tamaño del logo */
+    height: auto; /*para que el logo este proporcionado en su oraginilidad*/
+    margin-right: 5px; /* para que haya espacio entre el logo y el título */
+}
+nav{
+    position: sticky;
+    padding-top: 40px ; /* Espacio interno para el menú */
+    padding-bottom: 12px; 
+}
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(
+      217deg,
+      rgba(130, 174, 255, 0.089),
+      rgba(255, 131, 207, 0.041) 70.71%
+    ),
+    linear-gradient(127deg, rgba(255, 255, 255, 0.438), rgba(231, 137, 13, 0) 70.71%),
+    linear-gradient(336deg, rgba(137, 247, 255, 0.103), rgba(0, 0, 255, 0) 70.71%);
+}
+p {
+    font-family: 'Arial', sans-serif;  
+    font-size: 20px;                   
+    color: #333;                       
+    line-height: 1.5;                 
+    margin: 20px;                      
+    padding: 15px;                         
+    
+}
+
+.section-offset {
+    padding-top: 100px; /* Ajusta este valor según la altura del encabezado fijo */
+    margin-top: -100px; /* Ajusta este valor para compensar el padding-top */
+}
+
+
+
+
+
+.concejo ul {
+    font-family: 'Arial', sans-serif;  
+    font-size: 20px;                   
+    color: #333;                       
+    line-height: 1.5;                 
+    margin: 20px;                      
+    padding: 15px;                          
+    border-left: 4px solid #007bff;   
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+    border-radius: 5px;                
+    transition: transform 0.3s ease; 
+}
+
+.concejo li {
+    margin: 10px 0;
+}
+.concejos ul {
+    font-family: 'Arial', sans-serif;  
+    font-size: 20px;                   
+    color: #333;                       
+    line-height: 1.5;                 
+    margin: 20px;                      
+    padding: 15px;                         
+    border-left: 4px solid #007bff;   
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+    border-radius: 5px;                
+    transition: transform 0.3s ease; 
+}
+.concejos li {
+    margin: 10px 0;
+}
+
+
+
+
+
+nav {
+    margin-top: -10px; /* Acercar el menú al título */
+    margin-bottom: 30px; /* Separar el menú del resto del contenido */
+}
+
+
+
+.menu ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+.menu li {
+    list-style: none;
+    margin: 0 2px;
+}
+.menu ul li a {
+    position: relative;
+    display: block;
+    text-transform: uppercase;
+    margin: 20px 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #262626;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.5s;
+    z-index: 1;
+    border-bottom: 2px solid #007BFF;
+}
+.menu li a:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid #007BFF;
+    
+    transform: scaleY(2);
+    opacity: 0;
+    transition: 0.3s;
+}
+.menu li a:after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #007BFF;
+    transform: scale(0);
+    opacity: 0;
+    transition: 0.3s;
+    z-index: -1;
+}
+.menu ul li a:hover {
+    
+    color: #ffffff;
+    
+    border-radius: 5px;
+}
+.menu li a:hover:before {
+    transform: scaleY(1);
+    opacity: 1;
+}
+.menu li a:hover:after {
+    transform: scaleY(1);
+    opacity: 1;
+}
+
+
+
+
+footer{
+    font-size: 15px;
+    font-family: 'Arial', sans-serif;                    
+    color: #ffffff;     
+    background-color: #007bff; /* Fondo del pie de página */                  
+                                          
+    padding: 10px;                         
+     
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); 
+    border-radius: 5px;                
+    transition: transform 0.3s ease;
+    text-align: center;
+    
+}
+.informacion-lista {
+    list-style: none; /* Elimina las viñetas */
+    padding-left: 0;  /* Elimina el espaciado por defecto */
+}
+
+.whatsapp-btn {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 50px;
+    right: 20px;
+    background-color: #25D366; 
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: bounce 2s infinite;
+}
+ 
+.whatsapp-btn img {
+    width: 50px;
+    height: 50px;
+}
+
+.whatsapp-btn:hover {
+    background-color: #c9d4d3; 
+    transition: background-color 0.3s;
+}
+
+ @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0); 
+    }
+    40% {
+        transform: translateY(-10px); 
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+
+
+
+/*PARA
+    PAGINA
+        INICIO */
+
+
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px); /* Ajustar altura para centrar mejor el contenedor de login */
+    margin-top: -80px;
+}
+
+.login-box {
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    position: relative;
+    border: 2px solid #007BFF;
+}
+
+.login-box input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background-color: #0056b3;
+}
+
+.login-box h2 {
+    margin-bottom: 10px;
+    color: #007BFF;
+    font-size: 24px;
+}
+
+.login-box a {
+    display: block;
+    margin-top: 10px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.login-box a:hover {
+    text-decoration: underline;
+}
+
+
+
+.cta {
+    text-align: center;
+    margin: 40px 0;
+    padding: 20px;
+    
+    border-radius: 10px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cta-buttons button {
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.cta-buttons button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.cta-buttons button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+/*PARA
+    PAGINA 
+        ACTIVIDADES*/
+
+.actividades{
+    text-align: center;
+    
+}
+.actividades h2{
+    color: #007BFF;
+    font-size: 24px;
+    text-align: center;
+    
+}
+
+.testimonios {
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 20px;
+}
+
+.testimonios-lista blockquote {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.frase-inspiradora {
+    font-weight: bold;
+    font-size: 20px;
+    color: #007BFF;
+    text-align: center;
+    margin-top: 20px;
+}
+.testimonios h2{
+    font-size: 20px;
+}
